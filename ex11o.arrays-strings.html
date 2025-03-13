@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index of string in Array</title>
+    </head>
+    <body>
+        <script>
+            const random = ['hello', 'world', 'search', 'good', 'search'];
+            const random1 = ['not', 'found'];
+            const colors = ['green', 'red', 'blue', 'green'];
+
+            let index = -1;
+            for (i = 0; i < random.length; i++) {
+                if (random[i] === 'search') {
+                    index = i;
+                    break;
+                }
+            }
+
+            console.log(index);
+
+
+            index = -1;
+            for (i = 0; i < random1.length; i++) {
+                if (random1[i] === 'search') {
+                    index = i;
+                    break;
+                } 
+            }
+
+            console.log(index);      
+            
+            index = -1;
+            function findIndex(array, word) {
+                for (i = 0; i < array.length; i++) {
+                    if (array[i] === word) {
+                       return i;
+                    }
+                } 
+                return -1;
+            }
+
+            console.log(findIndex(colors, 'red'));
+            console.log(findIndex(colors, 'yellow'));
+        </script>
+    </body>
+</html>

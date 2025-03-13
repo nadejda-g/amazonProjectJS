@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Count Words in Array</title>
+    </head>
+    <body>
+        <script>
+            function countWords (array) {
+                let words = {};
+                for (i = 0; i < array.length; i++) {
+                    if (words[array[i]]) {
+                        words[array[i]] += 1;
+                    } else {
+                        words[array[i]] = 1;
+                    }
+                }
+                return words;
+            }
+
+            console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+        </script>
+    </body>
+</html>

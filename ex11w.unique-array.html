@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unique value in Array</title>
+    </head>
+    <body>
+        <script>
+            const random = ['hello', 'world', 'search', 'good','world', 'search'];
+            const random1 = ['not', 'found'];
+            const colors = ['green', 'red', 'blue', 'green'];
+        
+            // index = -1;
+            function findIndex(array, word) {
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i] === word) {
+                       return i;
+                    }
+                } 
+                return -1;
+            }
+
+            function unique(array) {
+                let uniquearray = [];
+                for (let i = 0; i < array.length; i++) {
+                    const wordIndex = findIndex(array, array[i])
+                    console.log(`uniquearray[${wordIndex}] = ${array[i]}`)
+                    uniquearray[wordIndex] = array[i]
+                } 
+                return uniquearray;
+            }
+
+            console.log(findIndex(colors, 'red'));
+            console.log(findIndex(colors, 'yellow'));
+            console.log(unique(colors));
+            console.log(unique(random));
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remove eggs from the Array</title>
+    </head>
+    <body>
+        <script>
+            const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+            const basket = ['egg', 'lettuce', 'tomato', 'egg', 'egg', 'carrot'];
+
+
+            function removeEgg (array) {
+                let result = [];
+                let eggsRemoved = 0;
+                for (i = 0; i < array.length; i++) {
+                    if (array[i] === 'egg' && eggsRemoved < 2) {
+                        eggsRemoved++;
+                        continue;
+                    }
+                    result.push(array[i]);
+                }
+                return result;
+            }
+           
+            console.log(removeEgg(foods));
+
+            console.log(removeEgg(basket));
+
+            function removeEggReversed (array) {
+                // array = ['egg', 'apple', 'egg', 'egg', 'ham']
+                let result = [];
+                let eggsRemoved = 0;
+
+                // reversedArray = ['ham', 'egg', 'egg', 'apple', 'egg' ]
+                let reversedArray = array.reverse();
+
+                for (i = 0; i < reversedArray.length; i++) {
+                    if (reversedArray[i] === 'egg' && eggsRemoved < 2) {
+                        eggsRemoved++;
+                        continue;
+                    }
+                    result.push(reversedArray[i]);
+                }
+                // result = ['ham', 'apple', 'egg' ]
+                return result.reverse();
+            }
+           
+            console.log(removeEggReversed(foods));
+
+            console.log(removeEggReversed(basket));
+        </script>
+    </body>
+</html>

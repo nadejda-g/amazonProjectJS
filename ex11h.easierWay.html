@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loops Arrays Functions</title>
+    </head>
+    <body>
+        <script>
+            const biba = [1, 2, 3, 4];
+            const boba = [-2, -1, 0, 99];
+            let biba1 = [];
+            let boba2 = [];
+
+            function addOne (array) {
+                const newArray = [];
+
+                for (i = 0; i < array.length; i++) {
+                    newArray.push(array[i] + 1);
+                }
+
+                return newArray;
+            }
+            
+            biba1 = addOne(biba);
+            boba2 = addOne(boba);
+            console.log(biba1);
+            console.log(boba2);
+            
+        </script>
+    </body>
+</html>

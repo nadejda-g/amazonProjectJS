@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Exercices</title>
+    </head>
+    <body>
+        <script>
+            const randomArray = [10, 20, 30];
+            randomArray[2] = 99;
+            console.log(randomArray);
+
+            const names = ['james', 'davin', 'sara'];
+            const countries = ['Italy', 'France', 'Spain'];
+
+
+            function getLastValue (array) {
+                const lastIndex = array.length - 1;
+                return array[lastIndex];
+            }
+
+            console.log(getLastValue(randomArray));
+            console.log(getLastValue(names));
+            console.log(getLastValue(countries));
+
+           function swapArray (array, first, last) {
+                first = array[0];
+                last = array[array.length - 1];
+                first = last;
+           }
+
+           function swapArray (array) {
+                let first = array[0];
+                let last = array[array.length - 1];
+                
+                array[0] = last;
+                array[array.length - 1] = first;
+           }
+
+           swapArray(randomArray);
+           console.log(randomArray);
+
+           swapArray(names);
+           console.log(names);
+
+           swapArray(countries);
+           console.log(countries);
+        </script>
+    </body>
+</html>

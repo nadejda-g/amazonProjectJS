@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document exercices</title>
+    </head>
+    <body>
+        <button class="button1">9a</button>
+        <button class="button2">9b</button>
+
+        <button class="heads-button" onclick="
+            writeChoice('heads');
+        ">heads</button>
+
+        <button class="tails-button" onclick="
+            writeChoice('tails');
+        ">tails</button>
+
+        <p class="choice">You choose: <span id="your-choice"></span></p>
+
+        <script>
+           // document.querySelector('button');
+            console.log(document.querySelector('button')); 
+           
+            document.querySelector('.button2')
+                .innerHTML = '9b done';
+
+            const headsElement = document.querySelector('.heads-button');
+            const tailsElement = document.querySelector('.tails-button');
+
+            // function showChoice (choice) {
+            //     if (choice === headsElement) {
+            //         return console.log()
+            //     } else if {
+            //         return 
+            //     }
+            // }
+
+
+            function writeChoice(choice) {
+                const yourChoice = document.querySelector('#your-choice');
+
+                yourChoice.innerHTML = choice;
+            }
+
+            writeChoice('');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gaming Button</title>
+        <style>
+            .gaming-button,
+            .music-button,
+            .tech-button {
+                font-family: Arial;
+                font-size: 15px;
+                background-color: rgb(230, 230, 230);
+                color: black;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .is-toggled {
+                font-family: Arial;
+                font-size: 15px;
+                background-color: rgb(228, 18, 18);
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .music-button.is-toggled {
+                background-color:chocolate;
+            }
+
+            .tech-button.is-toggled {
+                background-color:goldenrod;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="gaming-button" onclick="
+            changeColor(classList);
+        ">Gaming</button>
+
+        <button class="music-button" onclick="
+            changeColor(classList);
+        ">Music</button>
+
+        <button class="tech-button" onclick="
+            changeColor(classList);
+        ">Tech</button>
+        <script>
+            function changeColor (classList) {
+                if (classList.contains('is-toggled')) {
+                    classList.remove('is-toggled');
+                } else {
+                    const toggledElement = document.querySelector('.is-toggled')
+                    if (toggledElement) {
+                        toggledElement.classList.remove('is-toggled');
+                    }
+                    
+
+                    classList.add('is-toggled');
+                };
+            };
+        </script>
+    </body>
+</html>

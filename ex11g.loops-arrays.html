@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loops Arrays</title>
+    </head>
+    <body>
+        <script>
+            const numbers1 = [1, 2, 3];
+            let numbers2 = [];
+            const numbers3 = [1, 2, 3, 4];
+            const numbers4 = [-2, -1, 0, 99];
+            let newArray2 = [];
+            
+            
+            for (let i = 0; i < numbers1.length; i++) {
+                // console.log(i)
+                console.log(numbers1[i]);
+                numbers2.push(numbers1[i] + 1);
+            }
+
+            //console.log(numbers1);
+            //console.log(numbers2);
+
+            function addOne (array) {
+                let newArray1 = [];
+
+                for (let i = 0; i <= (array.length - 1); i++) {
+                    // console.log(array[i] + 1);
+                    newArray1.push(array[i] + 1);
+                }
+
+                return newArray1;
+            }
+            //console.log(addOne(numbers4));
+
+            console.log(addOne(numbers1));
+
+            newArray2.push = addOne(numbers4);
+            console.log(newArray2);
+
+        </script>
+    </body>
+</html>

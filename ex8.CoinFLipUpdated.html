@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coin FLip</title>
+    </head>
+    <body>
+    
+        <button onclick="
+            //guess = 'heads';
+            //console.log
+                playGame('heads');
+        ">heads</button>
+            
+        <button onclick="
+            //guess = 'tails';
+            //console.log
+                playGame('tails');
+        ">tails</button>
+
+        <script>
+            let guess = '';
+            let randomFlipFlop = Math.random();
+            let result = '';
+            if (randomFlipFlop <= 0.5) {
+                result = 'heads';
+            } else {
+                result = 'tails';
+            }
+
+            const score = JSON.parse(localStorage.getItem('score')) || { 
+                wins: 0,
+                loses: 0
+            };
+
+            //console.log(guess === result ? 'You win!' : 'You lose!');
+
+            function playGame(guess) {
+                if (guess === result) {
+                    console.log('You win!');
+                } else {
+                    console.log('You lose!');
+                }
+                
+                if (guess === result) {
+                    score.wins = score.wins + 1;
+                } else {
+                    score.loses = score.loses + 1;
+                } 
+                    console.log(score);
+
+                localStorage.setItem('score', JSON.stringify(score));
+            }
+
+        </script>
+    </body>
+</html>

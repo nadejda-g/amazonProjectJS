@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text box DOM</title>
+    </head>
+    <body>
+        <input placeholder="Name" class="input-box" onkeydown="
+           // console.log(event);
+            if (event.key === 'Enter') {
+               // const inputText = document.querySelector('.input-box');
+               // c
+              //  document.querySelector('.displayName')
+               //     .innerHTML = `You name is: ${name}`;
+
+               showText();
+            }
+            ">
+        <button onclick="
+            //const inputText = document.querySelector('.input-box');
+            //const name = inputText.value;
+            //document.querySelector('.displayName')
+            //    .innerHTML = `You name is: ${name}`;
+                showText();
+       ">Submit</button>
+        <p class="displayName"></p>
+    </body>
+    <script>
+        function showText () {
+            const inputText = document.querySelector('.input-box');
+            const name = inputText.value;
+            document.querySelector('.displayName')
+                .innerHTML = `You name is: ${name}`;
+        }
+    </script>
+</html>
